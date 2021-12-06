@@ -1,8 +1,7 @@
 import { useState } from "react";
-import "./App.css";
-import Form from "./components/Form";
+import Form from "./components/Registro";
 import Header from "./components/Header";
-import TodoList from "./components/TodoList";
+// import TodoList from "./components/TodoList";
 
 function App() {
   const [input, setInput] = useState("");
@@ -24,9 +23,9 @@ function App() {
             setEdit={setEdit}
           />
         </div>
-        <div>
+        {/* <div>
           <TodoList todos={todos} setTodos={setTodos} setEdit={setEdit} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

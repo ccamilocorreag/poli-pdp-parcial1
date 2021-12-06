@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-const Form = ({ input, setInput, todos, setTodos, edit, setEdit }) => {
+import { Card, Button } from "react-bootstrap";
+
+
+
+const Registro = ({ input, setInput, todos, setTodos, edit, setEdit }) => {
   const handleInputChange = ({ target }) => {
     setInput(target.value);
   };
@@ -33,7 +37,19 @@ const Form = ({ input, setInput, todos, setTodos, edit, setEdit }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
+      <Card>
+        <Card.Header>Registro</Card.Header>
+        <Card.Body>
+          
+
+
+          
+          <Button variant="secundary">Cancelar</Button>
+          <Button variant="primary">Agregar movimiento</Button>
+        </Card.Body>
+      </Card>
+
+      {/* <input
         type="text"
         placeholder="Enter to Todo"
         className="task-input"
@@ -43,9 +59,9 @@ const Form = ({ input, setInput, todos, setTodos, edit, setEdit }) => {
       />
       <button className="button-add" type="submit">
         {edit ? "Edit" : "Add"}
-      </button>
+      </button> */}
     </form>
   );
 };
 
-export default Form;
+export default Registro;
